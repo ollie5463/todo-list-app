@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react';
+import React, { useState, useContext } from 'react';
 import { Button } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import { TodoListContext } from '../providers/TodoListContext';
@@ -14,12 +14,13 @@ function TodoList(props) {
                 Task: 
                 <input className="input" type="text" value={textInInputBox} onChange={(event) => setTextInInputBox(event.target.value)}></input>
             </label>
-            <Button type="button" value="Submit" variant="contained" color="primary" onClick={()=> {setState({ todoListItems: [...state.todoListItems, textInInputBox]})}}>Submit</Button>
+                <Button type="button" value="Submit" variant="contained" color="primary" onClick={() => {
+                    setState({ type: 'setTodoListItems', payload: [textInInputBox] })
+                    setTextInInputBox('')
+                }}>Submit</Button>
         </form>
             <ul className="todoList">
                 {
-
-                    
                     state.todoListItems.map((item, index) =>
                         <div key={index}>
                             <Link className='link' key={index} to={`/${item}`}>{item}</Link>

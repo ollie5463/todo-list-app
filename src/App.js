@@ -1,8 +1,7 @@
-import React, { useEffect, useState, createContext, useContext  } from 'react';
+import React from 'react';
 import './App.css';
 import TodoList from './components/TodoList';
 import TodoListEntry from './components/TodoListEntry';
-import Axios from 'axios';
 import {
   BrowserRouter as Router,
   Route,
