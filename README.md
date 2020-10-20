@@ -1,3 +1,5 @@
+This app is purely for trying out the latest things in react e.g. advanced design patterns, hooks etc.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
